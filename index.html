@@ -258,6 +258,8 @@ function scene03(t) {
   r(kx+16, 272+bounce, 8, 16-legOff, '#332211');
   r(kx+32, 272+bounce, 8, 16+legOff, '#332211');
   r(kx+42, 272+bounce, 8, 16-legOff, '#332211');
+  // 马头像（远景小圆形，贴在马头颈处）
+  drawFace('horse', kx+56, 242+bounce, 28);
   // 骑士（剪影）
   r(kx+10, 228+bounce, 28, 26, '#334455'); // 身体
   r(kx+16, 210+bounce, 16, 22, '#334455'); // 头+盔
@@ -797,6 +799,8 @@ function scene10(t) {
     r(W/2-80, horseY-20, 120, 50, '#443322');
     r(W/2+30, horseY-35, 50, 40, '#443322'); // 马头
     r(W/2+66, horseY-40, 24, 20, '#443322');
+    // 马头像（贴在马头处）
+    drawFace('horse', W/2+54, horseY-22, 40);
     // 马腿腾空
     for(let i=0;i<4;i++) {
       r(W/2-70+i*26, horseY+28, 12, 20+Math.sin(jp*Math.PI+i)*15, '#332211');
